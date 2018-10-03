@@ -1,6 +1,5 @@
 /**
- * Implement a bank class.
- * <p>
+ * Implement a bank class * <p>s.
  * In this lab we will model a bank. We have two classes: Bank and BankAccount. You should finish
  * both classes, by fixing checkstyle errors, defining constructors, getters and setters, and
  * accessing private variables.
