@@ -7,9 +7,14 @@
  * @see <a href="https://cs125.cs.illinois.edu/lab/5/">Lab 5 Description</a>
  */
 public class Bank {
-
+    /**
+     * Why do u have to add these for variables
+     */
     public String bankName;
 
+    /**
+     * I guess this makes sense... default constructor?
+     */
     public Bank() {
         bankName = "Illini Bank";
     }
@@ -25,9 +30,8 @@ public class Bank {
      * @return boolean
      */
     public boolean withdrawMoney(final BankAccount bankAccount, final double amount) {
-        /*
-         * Implement this function
-         */
+        bankAccount.setAccountBalance(bankAccount.getAccountBalance() - amount);
+        return true;
     }
 
     /**
@@ -41,9 +45,8 @@ public class Bank {
      * @return boolean
      */
     public boolean depositMoney(final BankAccount bankAccount, final double amount) {
-        /*
-         * Implement this function
-         */
+        bankAccount.setAccountBalance(bankAccount.getAccountBalance() + amount);
+        return true;
     }
 
     /**
@@ -60,9 +63,9 @@ public class Bank {
 
     public boolean transferMoney(final BankAccount source, final BankAccount destination,
             final double amount) {
-        /*
-         * Implement this function
-         */
+        source.setAccountBalance(source.getAccountBalance() - amount);
+        destination.setAccountBalance(destination.getAccountBalance() + amount);
+        return true;
     }
 
     /**
@@ -73,21 +76,53 @@ public class Bank {
      */
 
     public void changeOwnerName(final BankAccount bankAccount, final String name) {
-        /*
-         * Implement this function
-         */
+        bankAccount.setOwnerName(name);
     }
 
-    public static int totalAccounts = 0;
+    /**
+     * total number of accounts
+     */
+    private static int totalAccounts = 0;
+
+    /**
+     *
+     * @return
+     */
+    public String getBankName() {
+        return bankName;
+    }
+
+    /**
+     *
+     * @param setBankName
+     */
+    public void setBankName(String setBankName) {
+        this.bankName = setBankName;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public static int getTotalAccounts() {
+        return totalAccounts;
+    }
+
+    /**
+     *
+     * @param setTotalAccounts
+     */
+    public static void setTotalAccounts(int setTotalAccounts) {
+        Bank.totalAccounts = setTotalAccounts;
+    }
+
     /**
      * Uses static variable to get number of bank accounts opened.
      *
      * @return the total number of accounts
      */
     public static int getNumberOfAccount() {
-        /*
-         * Implement this function
-         */
+        return totalAccounts;
     }
 
     /**
