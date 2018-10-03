@@ -119,7 +119,7 @@ public class BankAccount {
     }
     /**
      *
-     * @param setOwenerName
+     * @param setOwnerName
      */
     public void setOwnerName(final String setOwnerName) {
         this.ownerName = setOwnerName;
