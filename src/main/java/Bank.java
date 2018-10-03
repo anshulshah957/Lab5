@@ -10,8 +10,23 @@ public class Bank {
     /**
      * Why do u have to add these for variables
      */
-    public String bankName;
-
+    private String bankName;
+    /**
+     * hi
+     */
+    private static final double NUM1 = 1000.0;
+    /**
+     * there
+     */
+    private static final double NUM2 = 5000.0;
+    /**
+     * my
+     */
+    private static final double NUM3 = 200.0;
+    /**
+     * friends
+     */
+    private static final double NUM4 = 350.0;
     /**
      * I guess this makes sense... default constructor?
      */
@@ -144,14 +159,14 @@ public class Bank {
         System.out.println("Bank account for Johy Ive created\n\n");
 
         // Deposit money to both accounts and print new balance
-        bank.depositMoney(account1, 1000.0);
-        bank.depositMoney(account2, 5000.0);
+        bank.depositMoney(account1, NUM1);
+        bank.depositMoney(account2, NUM2);
 
         // Withdraw money from Account 2 and print new balance
-        bank.withdrawMoney(account2, 200.0);
+        bank.withdrawMoney(account2, NUM3);
 
         // Transfer money from Account 2 to Account 1 and print new balances
-        bank.transferMoney(account2, account1, 350.0);
+        bank.transferMoney(account2, account1, NUM4);
 
         // Print number of accounts
         System.out.print("Number of active accounts at " + bank.bankName + " are ");
